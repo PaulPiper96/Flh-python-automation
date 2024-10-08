@@ -1,0 +1,39 @@
+name: ScrapeEnv
+channels:
+  - defaults
+dependencies:
+  - bcrypt=3.2.0=py311h2bbff1b_1
+  - beautifulsoup4=4.12.3=py311haa95532_0
+  - brotli-python=1.0.9=py311hd77b12b_8
+  - bzip2=1.0.8=h2bbff1b_6
+  - ca-certificates=2024.7.2=haa95532_0
+  - certifi=2024.8.30=py311haa95532_0
+  - cffi=1.16.0=py311h2bbff1b_1
+  - charset-normalizer=3.3.2=pyhd3eb1b0_0
+  - cryptography=43.0.0=py311h89fc84f_0
+  - fabric=2.6.0=py311haa95532_0
+  - idna=3.7=py311haa95532_0
+  - invoke=1.6.0=py311haa95532_0
+  - libffi=3.4.4=hd77b12b_1
+  - openssl=3.0.15=h827c3e9_0
+  - paramiko=2.8.1=pyhd3eb1b0_0
+  - pip=24.2=py311haa95532_0
+  - pycparser=2.21=pyhd3eb1b0_0
+  - pynacl=1.5.0=py311h8cc25b3_0
+  - pysocks=1.7.1=py311haa95532_0
+  - python=3.11.9=he1021f5_0
+  - requests=2.32.3=py311haa95532_0
+  - setuptools=75.1.0=py311haa95532_0
+  - six=1.16.0=pyhd3eb1b0_1
+  - soupsieve=2.5=py311haa95532_0
+  - sqlite=3.45.3=h2bbff1b_0
+  - tk=8.6.14=h0416ee5_0
+  - tzdata=2024a=h04d1e81_0
+  - urllib3=2.2.2=py311haa95532_0
+  - vc=14.40=h2eaa2aa_1
+  - vs2015_runtime=14.40.33807=h98bb1dd_1
+  - wheel=0.44.0=py311haa95532_0
+  - win_inet_pton=1.1.0=py311haa95532_0
+  - xz=5.4.6=h8cc25b3_1
+  - zlib=1.2.13=h8cc25b3_1
+prefix: C:\Users\p.piper\AppData\Local\miniconda3\envs\ScrapeEnv
