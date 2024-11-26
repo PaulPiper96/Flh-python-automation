@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-def traverse_tags(url, tag):
+def traverse_tags(url, tag, keyword):
     """Extract and search content of specific HTML tags from a given URL."""
     try:
         # Send a request to fetch the page content
@@ -20,8 +20,10 @@ def traverse_tags(url, tag):
             # Extract the text from the tag
             text = tag_content.get_text()
 
-            # Search for the word "Sie" (case-insensitive) in the text
-            matches = re.findall(r'\bSie\b', text, flags=re.IGNORECASE)
+            pattern = rf'\b{keyword}\b'  # Use an f-string to insert the keyword
+
+            # Find matches in the text
+            matches = re.findall(pattern, text, flags=re.IGNORECASE)
 
             # Print the tag text if matches are found
             if matches:
@@ -80,7 +82,8 @@ class DomainHandler:
 
 
 if __name__ == '__main__':
-    sitemap_url = "https://edeka-liehr.de/sitemap.xml"
+    sitemap_url = input("URL: ")+"sitemap.xml"
+    keyword = input("keyword: ")
     print("Starting domain checkup...")
     domain_handler = DomainHandler(sitemap_url)  # Instantiate the class
 
@@ -91,7 +94,7 @@ if __name__ == '__main__':
     tag4 = 'div'
 
     for url in domain_handler.return_all_domains():
-        traverse_tags(url, tag1)
-        traverse_tags(url, tag2)
-        traverse_tags(url, tag3)
+        traverse_tags(url, tag1, keyword)
+        traverse_tags(url, tag2, keyword)
+        traverse_tags(url, tag3, keyword)
         username = input("Press Enter" + url)
